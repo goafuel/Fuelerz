@@ -190,3 +190,45 @@ document.getElementById('fuelerz-order-form').addEventListener('submit', functio
     orders.push(formData);
     localStorage.setItem('fuelerz_orders', JSON.stringify(orders));
 });
+// Add to your script.js
+document.addEventListener('DOMContentLoaded', function() {
+  const bgm = document.getElementById('bgm');
+  const toggleBtn = document.getElementById('music-toggle');
+  
+  // Try autoplay (will work on desktop browsers with user interaction)
+  function tryAutoplay() {
+    bgm.volume = 0.3; // Set to 30% volume
+    const promise = bgm.play();
+    
+    if (promise !== undefined) {
+      promise.catch(error => {
+        // Autoplay prevented - show UI to let user start
+        toggleBtn.classList.add('paused');
+      });
+    }
+  }
+  
+  // Check if mobile - if not, try autoplay
+  if (!/Mobi|Android/i.test(navigator.userAgent)) {
+    tryAutoplay();
+  }
+  
+  // Toggle button functionality
+  toggleBtn.addEventListener('click', function() {
+    if (bgm.paused) {
+      bgm.play();
+      this.classList.remove('paused');
+    } else {
+      bgm.pause();
+      this.classList.add('paused');
+    }
+  });
+  
+  // Pause when tab is inactive
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      bgm.pause();
+      toggleBtn.classList.add('paused');
+    }
+  });
+});
