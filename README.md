@@ -4,7 +4,7 @@
 Tired of blending in? Stand out with a custom website, logo, or branding that gets you noticed! Perfect for businesses, freelancers, and creatives who want to attract more customers.  
 
 👉 See our work:  
-https://goanbusiness.github.io/Fuelerz/  
+https://goafuel.github.io/Fuelerz/  
 
 ✨ Our Services ✨  
 ✅ Business Websites - Mobile-friendly sites to grow sales  
