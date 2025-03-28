@@ -130,7 +130,52 @@
                     <i class="fas fa-paper-plane"></i> Submit Order
                 </button>
             </form>
-            
+            <!-- Add this right after your form in the order section -->
+<div id="order-confirmation" class="confirmation-message" style="display: none;">
+    <div class="confirmation-content">
+        <div class="confirmation-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Thank You for Your Order! 🎉</h3>
+        
+        <div class="confirmation-details">
+            <p><i class="fas fa-check"></i> We've received your project details</p>
+            <p><i class="fas fa-clock"></i> You'll hear from us within 24 hours</p>
+        </div>
+        
+        <div class="whatsapp-notification">
+            <i class="fab fa-whatsapp"></i>
+            <p>We've sent the details to your WhatsApp for reference</p>
+        </div>
+        
+        <div class="next-steps">
+            <h4>What Happens Next?</h4>
+            <ol>
+                <li>Our team will review your requirements</li>
+                <li>We'll contact you to discuss the project</li>
+                <li>You'll receive a proposal with timeline & pricing</li>
+            </ol>
+        </div>
+        
+        <div class="contact-options">
+            <a href="https://wa.me/917722011476" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Chat Now
+            </a>
+            <p class="or-divider">or</p>
+            <a href="tel:+917722011476" class="call-btn">
+                <i class="fas fa-phone"></i> Call Us
+            </a>
+        </div>
+        
+        <div class="social-prompt">
+            <p>Follow us for updates:</p>
+            <div class="social-links">
+                <a href="https://instagram.com/fuelerzgoa"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
             <div id="order-confirmation" class="confirmation-message" style="display: none;">
                 <div class="confirmation-content">
                     <i class="fas fa-check-circle"></i>
@@ -186,5 +231,20 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- Add this just before </body> in your index.html -->
+<div class="music-player">
+  <audio id="bgm" loop>
+    <source src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+  <button id="music-toggle" aria-label="Toggle background music">
+    <i class="fas fa-music"></i>
+    <span class="sound-wave">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </span>
+  </button>
+</div>
 </body>
 </html>
