@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header with Improved Logo and Mobile Menu -->
+    <!-- Header with Mobile Menu -->
     <header>
         <div class="container">
             <div class="logo">
@@ -25,59 +25,35 @@
                     <li><a href="#portfolio"><i class="fas fa-briefcase"></i>Our Work</a></li>
                     <li><a href="#about"><i class="fas fa-info-circle"></i>About</a></li>
                     <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
-                    <li><a href="#order" class="cta-button"><i class="fas fa-rocket"></i>Order Now</a></li>
+                    <li><button class="cta-button"><i class="fas fa-rocket"></i>Order Now</button></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section with Background Image -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="overlay"></div>
         <div class="container">
             <div class="hero-content">
                 <h1>Goa's Web Design Experts</h1>
                 <p>Crafting Digital Success for Local Businesses</p>
-                <a href="#order" class="cta-button">Start Your Project</a>
+                <button class="cta-button">Start Your Project</button>
             </div>
         </div>
     </section>
 
-    <!-- Floating Section Titles -->
-    <div class="section-title-float"></div>
-
-    <!-- Revised Portfolio Section -->
+    <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
             <h2>Our Work in Goa</h2>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="local-cafe.jpg" alt="Goan Cafe Website">
-                    <div class="overlay">
-                        <h3>Goan Cafe Website</h3>
-                        <p>View Project</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="hotel-design.jpg" alt="Beach Resort Branding">
-                    <div class="overlay">
-                        <h3>Resort Branding</h3>
-                        <p>View Project</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="shop-design.jpg" alt="Local Shop Design">
-                    <div class="overlay">
-                        <h3>Local Shop Design</h3>
-                        <p>View Project</p>
-                    </div>
-                </div>
+                <!-- Portfolio Items Here -->
             </div>
         </div>
     </section>
- 
 
-    <!-- Orders Section -->
+    <!-- Add this section where you want the order form to appear -->
 <section id="order" class="order-section">
     <div class="container">
         <h2>Start Your Project</h2>
@@ -114,10 +90,10 @@
                     <label for="project-budget"><i class="fas fa-rupee-sign"></i> Budget Range</label>
                     <select id="project-budget" name="budget" required>
                         <option value="">Select budget</option>
-                        <option value="₹5,000 - ₹10,000">₹5,000 - ₹10,000</option>
-                        <option value="₹10,000 - ₹20,000">₹10,000 - ₹20,000</option>
-                        <option value="₹20,000 - ₹50,000">₹20,000 - ₹50,000</option>
-                        <option value="₹50,000+">₹50,000+</option>
+                        <option value="₹500 - ₹1,000">₹500 - ₹1,000</option>
+                        <option value="₹1,000 - ₹2,000">₹1,000 - ₹2,000</option>
+                        <option value="₹2,000 - ₹5,000">₹2,000 - ₹5,000</option>
+                        <option value="₹5,000+">₹5,000+</option>
                     </select>
                 </div>
                 
@@ -146,7 +122,17 @@
     </div>
 </section>
 
-    <!-- Revised Footer -->
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <!-- Contact Methods Same As Before -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Unified Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -162,7 +148,7 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Pricing</a></li>
+                        <li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Our Work</a></li>
                         <li><a href="#about">About Us</a></li>
                     </ul>
@@ -173,14 +159,17 @@
                     <p><i class="fab fa-whatsapp"></i> Chat on WhatsApp</p>
                     <p><i class="fas fa-envelope"></i> hello@fuelerz.com</p>
                 </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/fuelerzgoa"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/fuelerzgoa"><i class="fab fa-facebook"></i></a>
+                        <a href="https://linkedin.com/company/fuelerz"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2025 Fuelerz | Proudly Serving Goa Businesses</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
             </div>
         </div>
     </footer>
