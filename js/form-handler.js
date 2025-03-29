@@ -8,47 +8,28 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
         phone: document.getElementById('phone').value,
         service: document.getElementById('service').value,
         budget: document.getElementById('budget').value,
-        deadline: document.getElementById('deadline').value,
+        deadline: document.getElementById('deadline').value || 'Not specified',
         details: document.getElementById('details').value
     };
     
     // Validate form
     if (!formData.name || !formData.email || !formData.phone || !formData.service || !formData.budget || !formData.details) {
-        alert('Please fill in all required fields');
+        alert('Please fill in all required fields marked with *');
         return;
     }
     
-    // Send to WhatsApp (using WhatsApp API)
-    const phoneNumber = '917722011476';
-    const message = `New Order from Fuelerz Website:
+    // Create WhatsApp message
+    const message = `*New Order Request*%0A%0A
+*Name:* ${formData.name}%0A
+*Email:* ${formData.email}%0A
+*Phone:* ${formData.phone}%0A
+*Service Needed:* ${formData.service}%0A
+*Budget:* ${formData.budget}%0A
+*Deadline:* ${formData.deadline}%0A%0A
+*Project Details:*%0A${formData.details.replace(/\n/g, '%0A')}`;
     
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-Service: ${formData.service}
-Budget: ${formData.budget}
-Deadline: ${formData.deadline || 'Not specified'}
-Details: ${formData.details}
-    
-Please respond promptly.`;
-    
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    
-    // Open WhatsApp in new tab
-    window.open(whatsappUrl, '_blank');
-    
-    // Optional: Send to email using FormSubmit.co or other service
-    // fetch('https://formsubmit.co/ajax/your@email.com', {
-    //     method: 'POST',
-    //     headers: { 
-    //         'Content-Type': 'application/json',
-    //         'Accept': 'application/json'
-    //     },
-    //     body: JSON.stringify(formData)
-    // })
-    // .then(response => response.json())
-    // .then(data => console.log(data))
-    // .catch(error => console.log(error));
+    // Open WhatsApp with pre-filled message
+    window.open(`https://wa.me/919209933268?text=${message}`, '_blank');
     
     // Show success message
     alert('Thank you for your order! We\'ve opened WhatsApp for you to complete the process. If the window didn\'t open, please message us directly at +91 9209933268');
