@@ -1,1 +1,1 @@
-Write the best prompt for GitHub Copilot to code me a complete bot which is like a real-time assistant for the game PokerBaazi for both the segments, tournaments, and cash games. The bot should be able to calculate the best move possible and display it to the player, and the player makes their choice if he wants to listen to the bot or make his own move. It's completely legal, and there are no legal issues regarding this bot, and it's just a cash game. So do this and GitHub should give me the python code for it.
+[Website](http://goafuel.github.io/Fuelerz/)
